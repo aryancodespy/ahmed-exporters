@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="ahmed-exporters-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="home">
@@ -19,11 +20,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Ahmed Exporters home">
-        <span class="brand-mark">AE</span>
-        <span class="brand-text">
-          <strong>Ahmed Exporters</strong>
-          <small>Leather Goods Export &amp; Sourcing</small>
-        </span>
+        <img class="brand-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -71,7 +68,21 @@
 
         <div class="hero-visual reveal">
           <div class="showcase-card">
-            <div class="showcase-media" role="img" aria-label="Placeholder image area for commercial leather bags and export-ready accessories"></div>
+            <div class="showcase-media">
+              <img
+                class="media-image"
+                src="https://images.pexels.com/photos/27046147/pexels-photo-27046147.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                srcset="
+                  https://images.pexels.com/photos/27046147/pexels-photo-27046147.jpeg?auto=compress&cs=tinysrgb&w=640 640w,
+                  https://images.pexels.com/photos/27046147/pexels-photo-27046147.jpeg?auto=compress&cs=tinysrgb&w=900 900w,
+                  https://images.pexels.com/photos/27046147/pexels-photo-27046147.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w
+                "
+                sizes="(max-width: 760px) 100vw, 40vw"
+                alt="Black and brown leather bags photographed in a clean studio setting"
+                loading="eager"
+                decoding="async"
+              >
+            </div>
             <div class="showcase-content">
               <p>Commercial leather goods for importers, wholesalers, sourcing offices, and retail supply programs.</p>
               <div class="metric-row">
@@ -112,14 +123,50 @@
 
         <div class="card-grid three-grid">
           <article class="reason-card reveal">
+            <img
+              class="card-photo"
+              src="https://images.pexels.com/photos/6653239/pexels-photo-6653239.jpeg?auto=compress&cs=tinysrgb&w=900"
+              srcset="
+                https://images.pexels.com/photos/6653239/pexels-photo-6653239.jpeg?auto=compress&cs=tinysrgb&w=540 540w,
+                https://images.pexels.com/photos/6653239/pexels-photo-6653239.jpeg?auto=compress&cs=tinysrgb&w=900 900w
+              "
+              sizes="(max-width: 760px) 100vw, 30vw"
+              alt="Leather workshop tools laid out on a workbench"
+              loading="lazy"
+              decoding="async"
+            >
             <h3>Product Supply</h3>
             <p>Commercial leather goods and semi-finished items prepared for international B2B sourcing requirements.</p>
           </article>
           <article class="reason-card reveal">
+            <img
+              class="card-photo"
+              src="https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=900"
+              srcset="
+                https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=540 540w,
+                https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=900 900w
+              "
+              sizes="(max-width: 760px) 100vw, 30vw"
+              alt="Warehouse aisle filled with stacked export cartons and pallets"
+              loading="lazy"
+              decoding="async"
+            >
             <h3>Operational Support</h3>
             <p>Documentation support, supplier coordination, packing readiness, and shipment follow-through for export orders.</p>
           </article>
           <article class="reason-card reveal">
+            <img
+              class="card-photo"
+              src="https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=900"
+              srcset="
+                https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=540 540w,
+                https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=900 900w
+              "
+              sizes="(max-width: 760px) 100vw, 30vw"
+              alt="Container port with cargo stacks and cranes for international trade"
+              loading="lazy"
+              decoding="async"
+            >
             <h3>Buyer Confidence</h3>
             <p>Sample-based sourcing, realistic communication, and a process designed to support long-term buying relationships.</p>
           </article>
@@ -140,6 +187,18 @@
         </div>
 
         <div class="panel reveal">
+          <img
+            class="panel-photo"
+            src="https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=1000"
+            srcset="
+              https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+              https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w
+            "
+            sizes="(max-width: 760px) 100vw, 45vw"
+            alt="Rolled leather hides and planning sheets on a workshop desk"
+            loading="lazy"
+            decoding="async"
+          >
           <ul class="feature-list">
             <li>Leather bags for wholesale, gifting, retail, and private-label supply.</li>
             <li>Wallets and small goods in commercially suitable designs and finish ranges.</li>
@@ -164,10 +223,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Ahmed Exporters</strong>
-        <p>Bangladesh-based leather goods export and sourcing support for international B2B buyers.</p>
-      </div>
+      <a class="footer-brand" href="index.html" aria-label="Ahmed Exporters home">
+        <img class="footer-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
+      </a>
       <p>&copy; <span id="year"></span> Ahmed Exporters. Serving buyers since 2018.</p>
     </div>
   </footer>

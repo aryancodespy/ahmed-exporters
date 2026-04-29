@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="ahmed-exporters-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="contact">
@@ -18,11 +19,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Ahmed Exporters home">
-        <span class="brand-mark">AE</span>
-        <span class="brand-text">
-          <strong>Ahmed Exporters</strong>
-          <small>Leather Goods Export &amp; Sourcing</small>
-        </span>
+        <img class="brand-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
@@ -45,13 +42,29 @@
 
   <main id="main">
     <section class="page-hero section">
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow">Contact</p>
-        <h1>Send your buying requirement for leather goods sourcing from Bangladesh.</h1>
-        <p>
-          Share your product category, quantity estimate, target market, or sample need. Ahmed Exporters will
-          respond with a practical discussion around sourcing fit and next steps.
-        </p>
+      <div class="container page-hero-grid">
+        <div class="page-hero-inner reveal">
+          <p class="eyebrow">Contact</p>
+          <h1>Send your buying requirement for leather goods sourcing from Bangladesh.</h1>
+          <p>
+            Share your product category, quantity estimate, target market, or sample need. Ahmed Exporters will
+            respond with a practical discussion around sourcing fit and next steps.
+          </p>
+        </div>
+        <figure class="media-frame reveal">
+          <img
+            class="media-image"
+            src="https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            srcset="
+              https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=640 640w,
+              https://images.pexels.com/photos/9211513/pexels-photo-9211513.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w
+            "
+            sizes="(max-width: 760px) 100vw, 42vw"
+            alt="Cargo container depot representing global shipment coordination"
+            loading="eager"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
@@ -109,10 +122,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Ahmed Exporters</strong>
-        <p>Bangladesh-based leather goods export and sourcing support for international B2B buyers.</p>
-      </div>
+      <a class="footer-brand" href="index.html" aria-label="Ahmed Exporters home">
+        <img class="footer-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
+      </a>
       <p>&copy; <span id="year"></span> Ahmed Exporters. Serving buyers since 2018.</p>
     </div>
   </footer>

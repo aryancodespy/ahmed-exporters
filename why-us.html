@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="ahmed-exporters-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="why-us">
@@ -18,11 +19,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Ahmed Exporters home">
-        <span class="brand-mark">AE</span>
-        <span class="brand-text">
-          <strong>Ahmed Exporters</strong>
-          <small>Leather Goods Export &amp; Sourcing</small>
-        </span>
+        <img class="brand-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
@@ -45,39 +42,97 @@
 
   <main id="main">
     <section class="page-hero section">
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow">Why Choose Us</p>
-        <h1>Credibility built on process, quality attention, and buyer-focused coordination.</h1>
-        <p>
-          Ahmed Exporters presents itself through operational discipline and practical trade support, giving buyers
-          confidence in how orders are handled from sourcing to shipment.
-        </p>
+      <div class="container page-hero-grid">
+        <div class="page-hero-inner reveal">
+          <p class="eyebrow">Why Choose Us</p>
+          <h1>Credibility built on process, quality attention, and buyer-focused coordination.</h1>
+          <p>
+            Ahmed Exporters presents itself through operational discipline and practical trade support, giving buyers
+            confidence in how orders are handled from sourcing to shipment.
+          </p>
+        </div>
+        <figure class="media-frame reveal">
+          <img
+            class="media-image"
+            src="https://images.pexels.com/photos/33522417/pexels-photo-33522417.png?auto=compress&cs=tinysrgb&w=1200"
+            srcset="
+              https://images.pexels.com/photos/33522417/pexels-photo-33522417.png?auto=compress&cs=tinysrgb&w=640 640w,
+              https://images.pexels.com/photos/33522417/pexels-photo-33522417.png?auto=compress&cs=tinysrgb&w=1200 1200w
+            "
+            sizes="(max-width: 760px) 100vw, 42vw"
+            alt="Premium close-up of layered brown and black leather textures"
+            loading="eager"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
     <section class="section section-dark">
       <div class="container card-grid six-grid">
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/6653239/pexels-photo-6653239.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Leather workshop tools positioned for detailed craftsmanship work"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>6+ Years Industry Experience</h3>
           <p>Established in 2018 with experience supporting the day-to-day realities of B2B leather goods export coordination.</p>
         </article>
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Rolled leather hides on a workshop desk"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Bangladesh-Based Sourcing Advantage</h3>
           <p>Close access to a strong leather goods industry environment helps support product sourcing and supply alignment.</p>
         </article>
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/28028262/pexels-photo-28028262.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Detailed display of brown leather wallets with visible stitching"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Quality-Focused Process</h3>
           <p>Orders are approached with sample-based clarity and quality checked before shipment whenever applicable.</p>
         </article>
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/71123/pexels-photo-71123.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Brown leather belt close-up showing premium grain detail"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Flexible Bulk Orders</h3>
           <p>Support for standard commercial categories as well as mixed or custom sourcing requirements for overseas buyers.</p>
         </article>
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Orderly warehouse storage supporting organized shipment planning"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Buyer-First Communication</h3>
           <p>Clear communication around requirements, timing, and sourcing direction helps buyers make practical decisions.</p>
         </article>
         <article class="reason-card reveal">
+          <img
+            class="card-photo"
+            src="https://images.pexels.com/photos/13025947/pexels-photo-13025947.jpeg?auto=compress&cs=tinysrgb&w=900"
+            alt="Cargo containers and cranes at a working export port"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Reliable Shipment Coordination</h3>
           <p>Packing readiness, documentation flow, and export-side follow-up are treated as part of the buyer experience.</p>
         </article>
@@ -106,10 +161,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Ahmed Exporters</strong>
-        <p>Bangladesh-based leather goods export and sourcing support for international B2B buyers.</p>
-      </div>
+      <a class="footer-brand" href="index.html" aria-label="Ahmed Exporters home">
+        <img class="footer-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
+      </a>
       <p>&copy; <span id="year"></span> Ahmed Exporters. Serving buyers since 2018.</p>
     </div>
   </footer>

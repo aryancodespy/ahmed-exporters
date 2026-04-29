@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="ahmed-exporters-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="process">
@@ -18,11 +19,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Ahmed Exporters home">
-        <span class="brand-mark">AE</span>
-        <span class="brand-text">
-          <strong>Ahmed Exporters</strong>
-          <small>Leather Goods Export &amp; Sourcing</small>
-        </span>
+        <img class="brand-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span></span>
@@ -45,13 +42,29 @@
 
   <main id="main">
     <section class="page-hero section">
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow">Export Process</p>
-        <h1>A clear workflow from first inquiry to shipment coordination.</h1>
-        <p>
-          Ahmed Exporters follows a practical process designed to help buyers understand what happens at each step,
-          especially when sourcing from overseas and working on sample-based or bulk order decisions.
-        </p>
+      <div class="container page-hero-grid">
+        <div class="page-hero-inner reveal">
+          <p class="eyebrow">Export Process</p>
+          <h1>A clear workflow from first inquiry to shipment coordination.</h1>
+          <p>
+            Ahmed Exporters follows a practical process designed to help buyers understand what happens at each step,
+            especially when sourcing from overseas and working on sample-based or bulk order decisions.
+          </p>
+        </div>
+        <figure class="media-frame reveal">
+          <img
+            class="media-image"
+            src="https://images.pexels.com/photos/13025947/pexels-photo-13025947.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            srcset="
+              https://images.pexels.com/photos/13025947/pexels-photo-13025947.jpeg?auto=compress&cs=tinysrgb&w=640 640w,
+              https://images.pexels.com/photos/13025947/pexels-photo-13025947.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w
+            "
+            sizes="(max-width: 760px) 100vw, 42vw"
+            alt="Container terminal showing cargo movement for export logistics"
+            loading="eager"
+            decoding="async"
+          >
+        </figure>
       </div>
     </section>
 
@@ -98,6 +111,18 @@
     <section class="section section-accent">
       <div class="container split-feature">
         <div class="panel reveal">
+          <img
+            class="panel-photo"
+            src="https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=1000"
+            srcset="
+              https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+              https://images.pexels.com/photos/5156696/pexels-photo-5156696.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w
+            "
+            sizes="(max-width: 760px) 100vw, 45vw"
+            alt="Warehouse shelves lined with boxed shipments ready for dispatch"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Why Process Visibility Matters</h3>
           <p>
             International buyers often need confidence in how orders are handled, especially when working remotely.
@@ -105,6 +130,18 @@
           </p>
         </div>
         <div class="panel reveal">
+          <img
+            class="panel-photo"
+            src="https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=1000"
+            srcset="
+              https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=600 600w,
+              https://images.pexels.com/photos/5962631/pexels-photo-5962631.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w
+            "
+            sizes="(max-width: 760px) 100vw, 45vw"
+            alt="Leather material rolls and planning sheets used during sourcing preparation"
+            loading="lazy"
+            decoding="async"
+          >
           <h3>Process Benefits</h3>
           <ul class="feature-list">
             <li>Supports repeat orders through a familiar workflow.</li>
@@ -119,10 +156,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Ahmed Exporters</strong>
-        <p>Bangladesh-based leather goods export and sourcing support for international B2B buyers.</p>
-      </div>
+      <a class="footer-brand" href="index.html" aria-label="Ahmed Exporters home">
+        <img class="footer-logo" src="ahmed-exporters-logo.png" alt="Ahmed Exporters logo">
+      </a>
       <p>&copy; <span id="year"></span> Ahmed Exporters. Serving buyers since 2018.</p>
     </div>
   </footer>
