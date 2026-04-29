@@ -176,6 +176,36 @@ textarea {
   gap: 1.25rem;
 }
 
+.header-contact {
+  display: grid;
+  gap: 0.05rem;
+  justify-items: end;
+  margin-left: auto;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-2);
+  font-weight: 800;
+}
+
+.contact-number {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.header-contact small,
+.contact-details small,
+.footer-contact small {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
 .site-nav a {
   color: var(--muted);
   font-weight: 600;
@@ -693,6 +723,11 @@ textarea {
   color: var(--primary-2);
 }
 
+.contact-details article small {
+  display: block;
+  margin-top: 0.2rem;
+}
+
 .contact-form {
   padding: 1.5rem;
   display: grid;
@@ -740,6 +775,27 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.footer-meta {
+  display: grid;
+  justify-items: end;
+  gap: 0.35rem;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  color: var(--muted);
+}
+
+.footer-contact span {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-2);
+  font-weight: 800;
 }
 
 .footer-inner p {
@@ -810,6 +866,13 @@ textarea {
     z-index: 30;
   }
 
+  .header-contact {
+    order: 2;
+    justify-items: start;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
   .site-nav {
     position: absolute;
     top: calc(100% + 0.4rem);
@@ -860,6 +923,15 @@ textarea {
 
   .footer-inner {
     display: grid;
+  }
+
+  .footer-meta {
+    justify-items: start;
+  }
+
+  .footer-contact {
+    flex-wrap: wrap;
+    gap: 0.35rem 0.6rem;
   }
 
   .hero {
