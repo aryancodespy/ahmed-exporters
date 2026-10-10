@@ -1,64 +1,70 @@
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
-const navLinks = document.querySelectorAll(".site-nav a");
-const yearNode = document.getElementById("year");
-const revealNodes = document.querySelectorAll(".reveal");
-const contactForm = document.getElementById("contact-form");
-const formNote = document.getElementById("form-note");
-const currentPage = document.body.dataset.page;
-
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
-}
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+"use strict";
+(() => {
+  const menuButton=document.querySelector(".menu-button");
+  const mobileNav=document.getElementById("mobile-navigation");
+  const desktopBreakpoint=1080;
+  function closeMenu(){
+    if(!menuButton||!mobileNav)return;
+    mobileNav.hidden=true;
+    menuButton.setAttribute("aria-expanded","false");
+    menuButton.setAttribute("aria-label","Open navigation");
+  }
+  if(menuButton&&mobileNav){
+    menuButton.addEventListener("click",()=>{
+      const opening=mobileNav.hidden;
+      mobileNav.hidden=!opening;
+      menuButton.setAttribute("aria-expanded",String(opening));
+      menuButton.setAttribute("aria-label",opening?"Close navigation":"Open navigation");
     });
+    mobileNav.addEventListener("click",event=>{
+      if(event.target.closest("a"))closeMenu();
+    });
+    document.addEventListener("keydown",event=>{
+      if(event.key==="Escape"&&!mobileNav.hidden){closeMenu();menuButton.focus();}
+    });
+    window.addEventListener("resize",()=>{
+      if(window.innerWidth>desktopBreakpoint)closeMenu();
+    });
+    document.addEventListener("click",event=>{
+      if(!mobileNav.hidden&&!mobileNav.contains(event.target)&&!menuButton.contains(event.target))closeMenu();
+    });
+  }
+  document.querySelectorAll("[data-year]").forEach(node=>{
+    node.textContent=String(new Date().getFullYear());
   });
-}
-
-if (currentPage) {
-  navLinks.forEach((link) => {
-    if (link.dataset.nav === currentPage) {
-      link.classList.add("is-active");
-      link.setAttribute("aria-current", "page");
+  const form=document.getElementById("enquiry-form");
+  const status=document.getElementById("enquiry-status");
+  if(form){
+    const search=new URLSearchParams(location.search);
+    const interest=search.get("interest");
+    if(interest&&interest.length<=160){
+      const productField=form.elements.namedItem("interest");
+      if(productField)productField.value=interest;
     }
-  });
-}
-
-if (contactForm && formNote) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formNote.textContent = "Thanks for your inquiry. This demo form is ready to connect to your preferred backend or email workflow.";
-    contactForm.reset();
-  });
-}
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15,
-      rootMargin: "0px 0px -40px 0px",
-    }
-  );
-
-  revealNodes.forEach((node) => revealObserver.observe(node));
-} else {
-  revealNodes.forEach((node) => node.classList.add("is-visible"));
-}
+    form.addEventListener("submit",event=>{
+      event.preventDefault();
+      if(!form.reportValidity())return;
+      const values=new FormData(form);
+      const get=key=>String(values.get(key)||"").trim();
+      const subject="Sourcing enquiry — "+(get("interest")||get("type"));
+      const body=[
+        "Ahmed Exporters — Business Enquiry","",
+        "Full name: "+get("name"),
+        "Company: "+(get("company")||"Not provided"),
+        "Email: "+get("email"),
+        "Destination market: "+(get("destination")||"Not specified"),
+        "Enquiry type: "+get("type"),
+        "Product interest: "+(get("interest")||"Not specified"),
+        "Estimated quantity: "+(get("quantity")||"Not specified"),"",
+        "Buying requirement:","",get("message"),"",
+        "—",
+        "Prepared via the Ahmed Exporters website"
+      ].join("\n");
+      const draft="mailto:info@ahmedexporters.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+      if(status){
+        status.textContent="Your email application should open with the completed draft. Review the details and press Send; this website does not transmit the enquiry automatically.";
+      }
+      window.location.href=draft;
+    });
+  }
+})();
